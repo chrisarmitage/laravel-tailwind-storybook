@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="app">
-    <example-component />
+    <the-dashboard></the-dashboard>
 </div>
 
 <script src="{{ mix('js/app.js') }}"></script>
