@@ -1,3 +1,5 @@
+import Vuex from "vuex";
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -20,6 +22,35 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('the-dashboard', require('./components/TheDashboard').default);
+
+/**
+ * Create the Vuex store. This is the Single Source of Truth for all application state
+ */
+const store = new Vuex.Store({
+    state: {
+        value: 0
+    },
+
+    actions: {
+        incrementValue({ commit }) {
+            commit('INCREMENT_VALUE', 1);
+        },
+
+        decrementValue({ commit }) {
+            commit('DECREMENT_VALUE', 1);
+        },
+    },
+
+    mutations: {
+        INCREMENT_VALUE (state, value) {
+            state.value += value;
+        },
+
+        DECREMENT_VALUE (state, value) {
+            state.value -= value;
+        }
+    }
+});
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
