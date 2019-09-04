@@ -14,18 +14,18 @@
   export default {
     name: "TheDashboard",
     components: {ValueReadout, AppButton},
-    data() {
-      return {
-        value: 10,
+    computed: {
+      value() {
+        return this.$store.state.value;
       }
     },
     methods: {
       increment() {
-        this.value++;
+        this.$store.dispatch('incrementValue');
       },
 
       decrement() {
-        this.value--;
+        this.$store.dispatch('decrementValue');
       }
     }
   }
