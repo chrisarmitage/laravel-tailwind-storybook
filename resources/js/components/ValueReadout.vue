@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Value: <span>{{ value }}</span>
+  <div class="">
+    Value: <span class="font-bold">{{ value }}</span>
   </div>
 </template>
 

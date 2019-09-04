@@ -1,5 +1,10 @@
 <template>
-  <button @click="$emit('click')"><slot></slot></button>
+  <button
+    @click="$emit('click')"
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded w-16"
+  >
+    <slot></slot>
+  </button>
 </template>
 
 <script>
