@@ -13,7 +13,7 @@
     "devDependencies": {
         "@babel/core": "^7.5.5",
         "@storybook/vue": "^5.1.11",
-        "axios": "^0.18",
+        "axios": "^0.21",
         "babel-loader": "^8.0.6",
         "babel-preset-vue": "^2.0.2",
         "bootstrap": "^4.1.0",
